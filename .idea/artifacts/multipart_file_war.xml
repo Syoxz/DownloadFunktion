@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="multipart-file:war">
+    <output-path>$PROJECT_DIR$/multipart-file/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>multipart-file</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="multipart-file-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="multipart-file:war exploded" />
+    </root>
+  </artifact>
+</component>
