@@ -17,7 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class UploadController {
 
-     private final String UPLOAD_DIR = "C:\\Users\\User\\OneDrive\\Desktop\\";
+     private final String UPLOAD_DIR = "C:\\Users\\";
 
     @GetMapping("/")
     public String homepage() {
