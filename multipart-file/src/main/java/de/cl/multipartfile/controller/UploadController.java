@@ -1,9 +1,7 @@
 package de.cl.multipartfile.controller;
+import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
 
 
 import org.springframework.stereotype.Controller;
@@ -17,10 +15,17 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class UploadController {
 
-     private final String UPLOAD_DIR = "C:\\Users\\User\\OneDrive\\Desktop\\";
+     //C:\Users\Public\Desktop
+     String fileSeparator = FileSystems.getDefault().getSeparator();
+     Path path = Paths.get("C:\\test\\");
+     String UPLOAD_DIR = System.getProperty("user.home") + fileSeparator + "OneDrive" + fileSeparator + "Desktop" + fileSeparator;
+
+
+
 
     @GetMapping("/")
     public String homepage() {
+        System.out.println(System.getProperty("user.home"));
         return "index";
     }
 
@@ -34,6 +39,7 @@ public class UploadController {
         }
 
         // normalize the file path
+
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
 
         // save the file on the local file system
