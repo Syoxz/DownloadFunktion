@@ -19,13 +19,12 @@ public class UploadController {
      String fileSeparator = FileSystems.getDefault().getSeparator();
      Path path = Paths.get("C:\\test\\");
      String UPLOAD_DIR = System.getProperty("user.home") + fileSeparator + "OneDrive" + fileSeparator + "Desktop" + fileSeparator;
-
-
+//    String UPLOAD_DIR = System.getenv("user.home") + fileSeparator + "OneDrive" + fileSeparator + "Desktop" + fileSeparator;
 
 
     @GetMapping("/")
     public String homepage() {
-        System.out.println(System.getProperty("user.home"));
+        System.out.println(UPLOAD_DIR);
         return "index";
     }
 
