@@ -12,3 +12,4 @@ public class MultipartFileApplication extends SpringBootServletInitializer {
 	}
 
 }
+	
